@@ -50,10 +50,10 @@ void FindLongestCommonSubsequence(const std::string &string1, const std::string 
 		else
 			col = col - 1;
 	}
+	longestCommonSubsequence = std::string(longestCommonSubsequence.rbegin(), longestCommonSubsequence.rend());
 	for (int index = 0; index < N + 1; ++index)
 		delete[] arr[index];
 	delete[] arr;
-	longestCommonSubsequence = std::string(longestCommonSubsequence.rbegin(), longestCommonSubsequence.rend());
 }
 
 
